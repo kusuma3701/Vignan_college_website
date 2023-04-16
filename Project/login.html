@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    
+    <title>Document</title>
+    <style>
+      
+        .navbar-default{
+           
+               height: 90px;
+               padding-top: 20px;
+
+        }
+        .kusu{
+            padding-top: 0px;
+            padding-left: 100px;
+        }
+        .navbar-nav{
+            padding-top: 0.2px;
+            font-size: 30px;
+            margin-left: 10px;
+            width: 100;
+        }
+        .navbar ul li { 
+	        padding: 0px 15px; 
+            padding-left: 30px;
+        } 
+        .navbar ul{
+            padding-left: 300px;
+        }
+        
+    </style>
+    <script>  
+        function validateform(){  
+        var name=document.myform.name.value;  
+        var password=document.myform.password.value;  
+          
+        if (name==null || name==""){  
+          alert("Name can't be blank");  
+          return false;  
+        }else if(password.length<6){  
+          alert("Password must be at least 6 characters long.");  
+          return false;  
+          }  
+        }  
+        </script>  
+       
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-inverse navbar-fixed-top">
+        <div class="kusu">
+            <div class="navbar-header">
+                <img src="28.jpg" alt="" height="60px">
+            </div>
+        </div>
+        <ul class="nav navbar-nav">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="departments.html">Departments</a></li>
+            <li><a href="faculty.html">Faculty Details</a></li>
+            <li><a href="studentInfo.html">StudentInfo</a></li>
+            <li><a href="logout.html"><button class="btn btn-danger btn-lg" id="button">Logout</button></a></li>
+        </ul>
+    </nav>
+    <br><br><br><br><br><br><br><br><br><br><br>
+    <div class="container">
+    <div class="jumbotron">
+        <h1 class="display-4"><h1 style="color:darkmagenta">Login Here!!</h1></h1>
+        
+        <hr class="my-4">
+        <form action="academicInfo.html" name="myform"  onsubmit="return validateform()">
+            <div class="form-group">
+                <h2>Already have an account?</h2><br>
+                <label for="name"><h3>Student name:</h3></label>
+                <input type="text" class="form-control" name="name" id="" required>
+                
+                <label for="email"><h3>Password:</h3></label>
+                <input type="password" class="form-control" name="password" id="" required><br>
+                <a href="academicInfo.html"><button class="btn btn-primary btn-lg">Login</button></a><br>
+                <h6></h6>
+            </div><br>
+            <h4>Don't have an account?<a href="register.html">  Register here!!</a> </h4>
+        </form>
+        </div>
+        </div>
+</body>
+</html>
